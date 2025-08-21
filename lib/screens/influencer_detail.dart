@@ -209,7 +209,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:inovant/core/constants/app_colors.dart';
 import 'package:inovant/core/util/responsive_helper.dart';
-import 'package:inovant/screens/product_details.dart';
+import 'package:inovant/screens/restaurant_details.dart';
 import '../core/api_client.dart';
 import '../models/influencer_details_model.dart';
 

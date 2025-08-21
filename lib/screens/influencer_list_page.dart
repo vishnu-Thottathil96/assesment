@@ -102,58 +102,58 @@ class _InfluencerListPageState extends State<InfluencerListPage> {
   Widget build(BuildContext context) {
     if (_influencers.isEmpty && _isLoading) {
       return Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(_appBarHeight),
-          child: AppBar(
-            toolbarHeight: _appBarHeight,
-            elevation: 0,
-            automaticallyImplyLeading: false,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    AppColors.gradientStart,
-                    AppColors.gradientEnd,
-                  ],
-                ),
-              ),
-              child: SafeArea(
-                bottom: false,
-                child: Padding(
-                  padding: ResponsiveHelper.scalePadding(
-                    context,
-                    vertical: 10,
-                    horizontal: 16,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        AppStrings.listPageHeading,
-                        style: TextStyle(
-                          color: AppColors.headingText,
-                          fontSize: 24.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        AppStrings.listPageSubHeading,
-                        style: TextStyle(
-                          color: AppColors.subHeadingText,
-                          fontSize: 14.sp,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        // appBar: PreferredSize(
+        //   preferredSize: const Size.fromHeight(_appBarHeight),
+        // child: AppBar(
+        //   toolbarHeight: _appBarHeight,
+        //   elevation: 0,
+        //   automaticallyImplyLeading: false,
+        //   backgroundColor: Colors.transparent,
+        //   flexibleSpace: Container(
+        //     decoration: const BoxDecoration(
+        //       gradient: LinearGradient(
+        //         begin: Alignment.topLeft,
+        //         end: Alignment.bottomRight,
+        //         colors: [
+        //           AppColors.gradientStart,
+        //           AppColors.gradientEnd,
+        //         ],
+        //       ),
+        //     ),
+        //     child: SafeArea(
+        //       bottom: false,
+        //       child: Padding(
+        //         padding: ResponsiveHelper.scalePadding(
+        //           context,
+        //           vertical: 10,
+        //           horizontal: 16,
+        //         ),
+        //         child: Column(
+        //           crossAxisAlignment: CrossAxisAlignment.start,
+        //           mainAxisAlignment: MainAxisAlignment.spaceAround,
+        //           children: [
+        //             Text(
+        //               AppStrings.listPageHeading,
+        //               style: TextStyle(
+        //                 color: AppColors.headingText,
+        //                 fontSize: 24.sp,
+        //                 fontWeight: FontWeight.bold,
+        //               ),
+        //             ),
+        //             Text(
+        //               AppStrings.listPageSubHeading,
+        //               style: TextStyle(
+        //                 color: AppColors.subHeadingText,
+        //                 fontSize: 14.sp,
+        //               ),
+        //             ),
+        //           ],
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
+        // ),
         body: SafeArea(
             child: ListView.builder(
           itemBuilder: (context, index) => InfluencerShimmerCard(),
@@ -171,58 +171,58 @@ class _InfluencerListPageState extends State<InfluencerListPage> {
     }
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(_appBarHeight),
-        child: AppBar(
-          toolbarHeight: _appBarHeight,
-          elevation: 0,
-          automaticallyImplyLeading: false,
-          backgroundColor: Colors.transparent,
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  AppColors.gradientStart,
-                  AppColors.gradientEnd,
-                ],
-              ),
-            ),
-            child: SafeArea(
-              bottom: false,
-              child: Padding(
-                padding: ResponsiveHelper.scalePadding(
-                  context,
-                  vertical: 10,
-                  horizontal: 16,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      AppStrings.listPageHeading,
-                      style: TextStyle(
-                        color: AppColors.headingText,
-                        fontSize: 24.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      AppStrings.listPageSubHeading,
-                      style: TextStyle(
-                        color: AppColors.subHeadingText,
-                        fontSize: 14.sp,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
+      // appBar: PreferredSize(
+      //   preferredSize: const Size.fromHeight(_appBarHeight),
+      //   child: AppBar(
+      //     toolbarHeight: _appBarHeight,
+      //     elevation: 0,
+      //     automaticallyImplyLeading: false,
+      //     backgroundColor: Colors.transparent,
+      //     flexibleSpace: Container(
+      //       decoration: const BoxDecoration(
+      //         gradient: LinearGradient(
+      //           begin: Alignment.topLeft,
+      //           end: Alignment.bottomRight,
+      //           colors: [
+      //             AppColors.gradientStart,
+      //             AppColors.gradientEnd,
+      //           ],
+      //         ),
+      //       ),
+      //       child: SafeArea(
+      //         bottom: false,
+      //         child: Padding(
+      //           padding: ResponsiveHelper.scalePadding(
+      //             context,
+      //             vertical: 10,
+      //             horizontal: 16,
+      //           ),
+      //           child: Column(
+      //             crossAxisAlignment: CrossAxisAlignment.start,
+      //             mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //             children: [
+      //               Text(
+      //                 AppStrings.listPageHeading,
+      //                 style: TextStyle(
+      //                   color: AppColors.headingText,
+      //                   fontSize: 24.sp,
+      //                   fontWeight: FontWeight.bold,
+      //                 ),
+      //               ),
+      //               Text(
+      //                 AppStrings.listPageSubHeading,
+      //                 style: TextStyle(
+      //                   color: AppColors.subHeadingText,
+      //                   fontSize: 14.sp,
+      //                 ),
+      //               ),
+      //             ],
+      //           ),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
       body: RefreshIndicator(
         onRefresh: () => _fetchInfluencers(refresh: true),
         displacement: 30,
