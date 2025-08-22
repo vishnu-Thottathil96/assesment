@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:inovant/screens/home_page.dart';
-import 'package:inovant/screens/influencer_list_page.dart';
-import 'package:inovant/screens/restaurant_search_page.dart';
+import 'package:inovant/core/constants/app_colors.dart';
 import 'package:inovant/screens/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Lock orientation
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
   runApp(const MyApp());
 }
 
@@ -15,31 +22,41 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(393, 852), // adjust to your design
+      designSize: const Size(393, 852),
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: const Color(0xFF0A0F25), // dark night mode
+            scaffoldBackgroundColor: AppColors.background,
             appBarTheme: AppBarTheme(
-              backgroundColor: Colors.blueGrey.withOpacity(
-                0.4,
-              ), // glass-like effect
+              backgroundColor: AppColors.appBarBackground,
               elevation: 0,
-              foregroundColor: Colors.white,
+              foregroundColor: AppColors.headingText,
               titleTextStyle: TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.bold,
               ),
               toolbarTextStyle: TextStyle(fontSize: 14.sp),
-              shadowColor: Colors.grey.withOpacity(0.5),
+              shadowColor: AppColors.paymentShadow,
               shape: const Border(
-                bottom: BorderSide(color: Colors.white24, width: 1),
+                bottom:
+                    BorderSide(color: AppColors.glassAppBarBorder, width: 1),
               ),
             ),
           ),
+
+          // Override system text scaling
+          builder: (context, widget) {
+            final mediaQuery = MediaQuery.of(context);
+            return MediaQuery(
+              data:
+                  mediaQuery.copyWith(textScaler: const TextScaler.linear(1.0)),
+              child: widget!,
+            );
+          },
+
           home: child,
         );
       },

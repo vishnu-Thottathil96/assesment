@@ -121,19 +121,16 @@ class ResponsiveHelper {
     double vertical = 0,
   }) {
     return EdgeInsets.only(
-      left:
-          left > 0
-              ? scaleWidth(context, left)
-              : scaleWidth(context, horizontal),
-      right:
-          right > 0
-              ? scaleWidth(context, right)
-              : scaleWidth(context, horizontal),
+      left: left > 0
+          ? scaleWidth(context, left)
+          : scaleWidth(context, horizontal),
+      right: right > 0
+          ? scaleWidth(context, right)
+          : scaleWidth(context, horizontal),
       top: top > 0 ? scaleHeight(context, top) : scaleHeight(context, vertical),
-      bottom:
-          bottom > 0
-              ? scaleHeight(context, bottom)
-              : scaleHeight(context, vertical),
+      bottom: bottom > 0
+          ? scaleHeight(context, bottom)
+          : scaleHeight(context, vertical),
     );
   }
 

@@ -5,6 +5,10 @@ class AppColors {
   static const Color gradientStart = Color(0xFF1E3C72); // deep blue
   static const Color gradientEnd = Color(0xFF2A5298); // lighter blue
 
+  // AppBar
+  static const Color appBarBackground =
+      Color(0x663B4C5C); // semi-transparent blueGrey
+
   // Base
   static const Color background = Colors.black87;
   static const Color headingText = Colors.white;
