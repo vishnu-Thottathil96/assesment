@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:inovant/screens/home_page.dart';
 import 'package:inovant/screens/influencer_list_page.dart';
 import 'package:inovant/screens/restaurant_search_page.dart';
+import 'package:inovant/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const HomePage(),
+      child: const SplashScreen(),
     );
   }
 }
